@@ -20,7 +20,7 @@ const QuickView = ({ object, setview }) => {
     }, []);
 
     return (
-        <div onClick={handleOverlay} className='w-full h-full cursor-crosshair overlay px-3 bg-[rgb(0,0,0,0.7)] fixed top-0 left-0 flex justify-center items-center'>
+        <div onClick={handleOverlay} className='w-full h-full cursor-crosshair overlay px-3 bg-[rgb(0,0,0,0.7)] fixed z-50 top-0 left-0 flex justify-center items-center'>
             <div className='w-[100%] md:w-[40%] lg:w-[30%] relative py-5 cursor-auto bg-white rounded-xl p-3'>
                 <div onClick={remove} className='absolute top-2 right-2 cursor-pointer bg-black text-white w-[30px] h-[30px] hover:bg-[rgb(44,42,42)] rounded-full flex justify-center items-center'>
                     <i className="fa-solid fa-xmark"></i>

@@ -24,7 +24,8 @@ const UpdateForm = () => {
     }, [])
 
 
-    const handleUpdate = () => {
+    const handleUpdate = (e) => {
+        e.preventDefault()
         dispatch(updateUser(obj))
         toast.success("User updated successfully",
             {

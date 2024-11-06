@@ -94,9 +94,9 @@ const Allpost = () => {
       <div><ToastContainer /></div>
       <div>
 
-        <div className=' bg-gray-200 p-3'>
+        <div className=' bg-gray-200'>
 
-          <div className='w-full lg:h-[80px] lg:flex justify-center items-center sticky top-0 z-20 bg-[#E5E7EB]'>
+          <div className='w-full lg:h-[80px] lg:flex justify-center items-center sticky top-0 z-20 bg-[#E5E7EB] p-2'>
             <div className='flex flex-wrap items-center justify-between'>
 
               <div className=' md:flex'>
@@ -138,7 +138,7 @@ const Allpost = () => {
           {
             array && array.length > 0 ?
 
-              <div class="relative overflow-x-auto shadow-md sm:rounded-lg py-5">
+              <div class="relative overflow-x-auto shadow-md sm:rounded-lg py-5 px-2">
                 <div className='overflow-auto'>
                   <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
 
@@ -182,7 +182,7 @@ const Allpost = () => {
                                   {e.name}
                                 </td>
                                 <td class="px-6 py-4">
-                                  RS.{e.email}
+                                  {e.email}
                                 </td>
                                 <td class="px-6 py-4 text-nowrap">
                                   {e.age}
