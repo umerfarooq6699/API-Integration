@@ -2,24 +2,24 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
 export const postData=createAsyncThunk("post data",async(obj)=>{
-    const value=await axios.post("https://66d1927762816af9a4f4200e.mockapi.io/crud",obj)
+    const value=await axios.post("https://66d1927762816af9a4f4200e.mockapi.io/list",obj)
     return value.data
 })
 
 export const getData=createAsyncThunk("get data",async()=>{
-    const value=await axios.get("https://66d1927762816af9a4f4200e.mockapi.io/crud")
+    const value=await axios.get("https://66d1927762816af9a4f4200e.mockapi.io/list")
     return value.data
 })
 
 
 export const deleteUser=createAsyncThunk("delete user",async(id)=>{
     console.log(id,"createAsyncThunk")
-    const value=await axios.delete(`https://66d1927762816af9a4f4200e.mockapi.io/crud/${id}`)
+    const value=await axios.delete(`https://66d1927762816af9a4f4200e.mockapi.io/list/${id}`)
     return id
 })
 
 export const updateUser=createAsyncThunk("update data",async(obj)=>{
-    const value=await axios.put(`https://66d1927762816af9a4f4200e.mockapi.io/crud/${obj.id}`,obj)
+    const value=await axios.put(`https://66d1927762816af9a4f4200e.mockapi.io/list/${obj.id}`,obj)
     return value.data
 })
 
